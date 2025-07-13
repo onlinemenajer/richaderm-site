@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richaderm</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <style>
       :root {
@@ -175,6 +174,10 @@
         font-weight: 700;
         color: var(--primary);
       }
+      .main-logo {
+        max-width: 140px;
+        height: auto;
+      }
       .banner {
         background: url('banner-bg.jpg') no-repeat center center/cover;
         display: flex;
@@ -313,6 +316,53 @@
       .video-thumbnail:hover {
         transform: scale(1.05);
       }
+
+      /* DAHA GELİŞMİŞ MOBİL UYUMLULUK */
+      @media (max-width: 500px) {
+        .container {
+          padding: 0 2vw;
+        }
+        .products-list {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .product-card {
+          padding: 10px;
+          font-size: 0.95em;
+        }
+        .banner {
+          padding: 32px 0;
+          min-height: 180px;
+          border-radius: 10px;
+        }
+        .banner-content h1 {
+          font-size: 1.3rem;
+        }
+        .banner-content p {
+          font-size: 1rem;
+        }
+        .btn {
+          padding: 10px 16px;
+          font-size: 0.95rem;
+        }
+        h1, h2 {
+          font-size: 1.2rem !important;
+        }
+        nav {
+          gap: 6px;
+          font-size: 0.95rem;
+        }
+        .main-logo {
+          max-width: 90px;
+          height: auto;
+        }
+        .video-wrapper {
+          margin: 12px 0;
+        }
+        .about-section, .products-section, .contact-section {
+          padding: 24px 0;
+        }
+      }
     </style>
 </head>
 <body>
@@ -382,7 +432,7 @@
             <a class="product-card" href="https://www.shopier.com/Richaderm" target="_blank">
                 <img src="anti-selulit-losyon.jpg" alt="Anti-Selülit Losyon">
                 <h3>Anti-Selülit Losyon</h3>
-                <p>Çatlakların görünümünü azaltır, cildin elastikiyetini artırır, nemlendirir ve cilt tonunu düzenler. "Richaderm ile Çatlaklara Veda, Pürüzsüz Cilde Merhaba!"</p>
+                <p>Çatlakların görünümünü azaltır, cildin elastikiyetini artırır, nemlendirir ve cilt tonunu düzenler. \"Richaderm ile Çatlaklara Veda, Pürüzsüz Cilde Merhaba!\"</p>
             </a>
         </div>
     </section>
@@ -395,14 +445,6 @@
             </video>
         </div>
     </section>
-    <script>
-    function openVideoPopup() {
-        document.getElementById('videoPopup').style.display = 'flex';
-    }
-    function closeVideoPopup() {
-        document.getElementById('videoPopup').style.display = 'none';
-    }
-    </script>
     <section class="about-section" id="about">
         <div class="container">
             <h2>Hakkımızda</h2>
